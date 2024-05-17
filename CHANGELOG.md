@@ -1,3 +1,5 @@
+# [1.1.0](https://github.com/1024pix/ember-api-actions/compare/v1.0.0...v1.1.0) (2024-05-17)
+
 # 1.0.0 (2024-05-17)
 
 ## [0.2.9](https://github.com/mike-north/ember-api-actions/compare/v0.2.8...v0.2.9) (2020-04-04)
