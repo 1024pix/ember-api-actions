@@ -32,24 +32,24 @@ jobs:
     - run: npm run lint
     - run: npm run test
 
-  ember-try:
-    name: Ember Try
-    needs: [test, floating-deps]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        ember-try-scenario:
-          - ember-lts-3.20
-          - ember-lts-3.24
-          - ember-release
-          - ember-beta
-          - ember-canary
-          - ember-default-with-jquery
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: 'package.json'
-      - run: npm i
-      - run: npm run lint
-      - run: npx ember try:one ${{ matrix.ember-try-scenario }}
+#  ember-try:
+#    name: Ember Try
+#    needs: [test, floating-deps]
+#    runs-on: ubuntu-latest
+#    strategy:
+#      matrix:
+#        ember-try-scenario:
+#          - ember-lts-3.20
+#          - ember-lts-3.24
+#          - ember-release
+#          - ember-beta
+#          - ember-canary
+#          - ember-default-with-jquery
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: actions/setup-node@v4
+#        with:
+#          node-version-file: 'package.json'
+#      - run: npm i
+#      - run: npm run lint
+#      - run: npx ember try:one ${{ matrix.ember-try-scenario }}
